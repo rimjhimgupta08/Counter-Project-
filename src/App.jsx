@@ -1,6 +1,7 @@
 import { useState } from 'react'
 import './App.css'
-
+import Navbar from './Components/Navbar';
+// import name from './Components/Navbar'
 function App() {
   //let counter = 6;
    let [counter, setCounter] = useState(5)
@@ -21,11 +22,18 @@ function App() {
   }
   return (
     <>
-      <h2>Hello React || {counter}</h2>
-      <h3>Counter : {counter}</h3>
+    <Navbar/>
+    <div className="div">
+      <h2> React || Project </h2>
+      <h2 className='heading'>Counter : {counter}</h2>
       <button onClick={addValue}>Add</button>
-      <br />
+      <br /> <br />
       <button onClick={removeValue}>Remove </button>
+      {/* <name/> */}
+      {/* <p>{name}</p> */}
+      
+      </div>
+      
     </>
   )
 }
